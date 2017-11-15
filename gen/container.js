@@ -14,7 +14,7 @@ module.exports = {
   }],
   actions: [{
     type: 'add',
-    path: src + 'containers/{{name}}/{{name}}.jsx',
+    path: src + 'containers/{{name}}/{{name}}.js',
     templateFile: path.resolve(__dirname, 'container/container.hbs'),
   }, {
     type : 'add',
@@ -22,7 +22,7 @@ module.exports = {
     templateFile: path.resolve(__dirname, 'container/index.hbs'),
   }, {
     type: 'add',
-    path: src + 'containers/{{name}}/{{name}}.spec.jsx',
+    path: src + 'containers/{{name}}/{{name}}.spec.js',
     templateFile: path.resolve(__dirname, 'container/spec.hbs'),
   }],
 };

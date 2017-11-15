@@ -20,7 +20,7 @@ module.exports = {
   actions: (data) => {
     const actions = [{
       type: 'add',
-      path: src + 'routes/{{name}}/{{name}}.jsx',
+      path: src + 'routes/{{name}}/{{name}}.js',
       templateFile: path.resolve(__dirname, 'route/route.hbs'),
     }, {
       type: 'add',
@@ -28,14 +28,14 @@ module.exports = {
       templateFile: path.resolve(__dirname, 'route/index.hbs'),
     }, {
       type: 'add',
-      path: src + 'routes/{{name}}/{{name}}.spec.jsx',
+      path: src + 'routes/{{name}}/{{name}}.spec.js',
       templateFile: path.resolve(__dirname, 'route/spec.hbs'),
     }];
 
     if (data.styles) {
       actions.push({
         type: 'add',
-        path: src + 'routes/{{name}}/{{name}}.scss',
+        path: src + 'routes/{{name}}/{{name}}.css',
         templateFile: path.resolve(__dirname,'route/styles.hbs'),
       });
     }

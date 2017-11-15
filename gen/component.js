@@ -15,7 +15,7 @@ module.exports = {
   }, {
     type: 'confirm',
     name: 'styles',
-    message: 'le component a t ilbesoins de styles ?',
+    message: 'le component a t il besoins de styles ?',
     default: true,
   }],
 	actions: (data) => {
@@ -38,7 +38,7 @@ module.exports = {
     if (data.styles) {
       actions.push({
         type: 'add',
-        path: src + 'components/{{name}}/{{name}}.scss',
+        path: src + 'components/{{name}}/{{name}}.css',
         templateFile: path.resolve(__dirname, 'component/styles.hbs'),
       });
     }
@@ -51,7 +51,7 @@ module.exports = {
 
     actions.push({
       type: 'add',
-      path: src + 'components/{{name}}/{{name}}.spec.jsx',
+      path: src + 'components/{{name}}/{{name}}.spec.js',
       templateFile: path.resolve(__dirname,'component/spec.hbs'),
     });
 
