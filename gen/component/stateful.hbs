@@ -1,0 +1,29 @@
+import React from 'react';
+
+{{#if styles}}
+import styles from './{{name}}.scss';
+{{/if}}
+
+class {{name}} extends React.Component {
+  static propTypes = {};
+
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+  render() {
+    return (
+      {{#if styles}}
+      <div className={styles.{{camelCase name ~}} }>
+      {{else}}
+      <div>
+      {{/if}}
+        {{name}}
+      </div>
+    );
+  }
+}
+
+export default {{name}};

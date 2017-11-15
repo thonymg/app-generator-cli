@@ -1,0 +1,32 @@
+import deepFreeze from 'deep-freeze';
+
+import { {{name}}Reducer, INITIAL_STATE } from './{{name}}';
+
+describe('{{name}}Reducer', () => {
+  it('returns initial state', () => {
+    const action = {
+      type: '@@INIT',
+    };
+
+    deepFreeze(action);
+
+    const nextState = {{name}}Reducer(undefined, action);
+
+    expect(nextState).toEqual(INITIAL_STATE);
+  });
+
+  it('returns existing state for unknown action', () => {
+    const action = {
+      type: '@@UNKNOWN',
+    };
+
+    const prevState = INITIAL_STATE;
+
+    deepFreeze(action);
+    deepFreeze(prevState);
+
+    const nextState = {{name}}Reducer(prevState, action);
+
+    expect(nextState).toBe(prevState);
+  });
+});
