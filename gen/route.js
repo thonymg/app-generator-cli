@@ -1,7 +1,7 @@
 /* eslint-disable rule */
 
 const path = require('path');
-const src = '../src/';
+const {src} = require('./config');
 
 module.exports = {
 	description: 'react-router route',

@@ -1,6 +1,6 @@
 /* eslint-enable rule */
 const path = require('path');
-const src = '../src/';
+const {src} = require('./config');
 
 module.exports = {
 	description: 'react-redux container',

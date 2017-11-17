@@ -1,0 +1,11 @@
+
+export function {{camelCase name}}{{pascalCase actionName}}(...) {
+  return {
+    type: {{constantCase actionName}}_{{constantCase name}},
+    ...
+  };
+};
+{{#if next.edit}}
+$1
+{{/if}}
+//--ACTIONS CREATORS--
