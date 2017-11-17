@@ -3,7 +3,7 @@
 1- copy & past this folder on root of your application
 this generator needs ```plopjs``` make sure to have plopjs installed with
 	```bash
-		npm install plop --save
+		npm install plop enzyme redux-mock deep-freeze redux-mock-store --save-dev
 	```
 
 2- add this script on your package.json file
