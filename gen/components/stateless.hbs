@@ -1,0 +1,20 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+{{#if styles}}
+import styles from './{{name}}.css';
+{{/if}}
+
+const {{pascalCase name}} = props => (
+  {{#if styles}}
+  <div className={styles.{{camelCase name ~}} }>
+  {{else}}
+  <div>
+  {{/if}}
+    {{name}}
+  </div>
+);
+
+{{pascalCase name}}.propTypes = {};
+
+export default {{pascalCase name}};

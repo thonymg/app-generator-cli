@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 {{#if styles}}
-import styles from './{{name}}.scss';
+import styles from './{{name}}.css';
 {{/if}}
 
-class {{name}} extends React.Component {
+class {{pascalCase name}} extends React.Component {
   static propTypes = {};
 
   constructor(props) {
@@ -26,4 +27,4 @@ class {{name}} extends React.Component {
   }
 }
 
-export default {{name}};
+export default {{pascalCase name}};

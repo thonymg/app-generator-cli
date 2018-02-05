@@ -1,8 +1,13 @@
-export const INITIAL_STATE = {};
+import * as a from '../../actions/actions_types.js'
+const INITIAL_STATE = {};
 
-export const {{name}}Reducer = (prevState = INITIAL_STATE, action) => {
+export const {{camelCase name}}Reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+		case A... :
+			return
     default:
-      return prevState;
+      return state;
   }
 };
+
+export default {{camelCase name}}Reducer;

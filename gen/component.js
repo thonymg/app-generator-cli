@@ -8,20 +8,23 @@ module.exports = {
 		{
 			type: 'input',
 			name: 'name',
-			message: 'quel est le nom du component ?'
+			message: 'quel est le nom du component ?',
+			validate: function(name) {
+				return name !== '';
+			},
 		},
 		{
 			type: 'confirm',
 			name: 'stateless',
 			message: 'est ce un stateless component (sans état)?',
-			default: true
+			default: true,
 		},
 		{
 			type: 'confirm',
 			name: 'styles',
 			message: 'le component a t il besoins de styles ?',
-			default: true
-		}
+			default: true,
+		},
 	],
 	actions: data => {
 		const actions = [];
@@ -29,37 +32,37 @@ module.exports = {
 		if (data.stateless) {
 			actions.push({
 				type: 'add',
-				path: src + 'components/{{name}}/{{name}}.js',
-				templateFile: path.resolve(__dirname, 'component/stateless.hbs')
+				path: src + 'components/ui/{{name}}/{{name}}.js',
+				templateFile: path.resolve(__dirname, 'components/stateless.hbs'),
 			});
 		} else {
 			actions.push({
 				type: 'add',
-				path: src + 'components/{{name}}/{{name}}.js',
-				templateFile: path.resolve(__dirname, 'component/stateful.hbs')
+				path: src + 'components/ui/{{name}}/{{name}}.js',
+				templateFile: path.resolve(__dirname, 'components/stateful.hbs'),
 			});
 		}
 
 		if (data.styles) {
 			actions.push({
 				type: 'add',
-				path: src + 'components/{{name}}/{{name}}.css',
-				templateFile: path.resolve(__dirname, 'component/styles.hbs')
+				path: src + 'components/ui/{{name}}/{{name}}.css',
+				templateFile: path.resolve(__dirname, 'components/styles.hbs'),
 			});
 		}
 
 		actions.push({
 			type: 'add',
-			path: src + 'components/{{name}}/index.js',
-			templateFile: path.resolve(__dirname, 'component/index.hbs')
+			path: src + 'components/ui/{{name}}/index.js',
+			templateFile: path.resolve(__dirname, 'components/index.hbs'),
 		});
 
 		actions.push({
 			type: 'add',
-			path: src + 'components/{{name}}/{{name}}.test.js',
-			templateFile: path.resolve(__dirname, 'component/spec.hbs')
+			path: src + 'components/ui/{{name}}/{{name}}.test.js',
+			templateFile: path.resolve(__dirname, 'components/spec.hbs'),
 		});
 
 		return actions;
-	}
+	},
 };
