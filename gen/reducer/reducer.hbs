@@ -1,13 +1,17 @@
 import * as a from '../../actions/actions_types.js'
 const INITIAL_STATE = {};
 
-export const {{camelCase name}}Reducer = (state = INITIAL_STATE, action) => {
+export const {{camelCase actionName}}Reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-		case A... :
+		case a.FILTER_{{constantCase actionName}}_{{constantCase scope}}:
+			return (state = a.FILTER_{{constantCase actionName}}_{{constantCase scope}});
+
+		case a...
 			return
+
     default:
       return state;
   }
 };
 
-export default {{camelCase name}}Reducer;
+export default {{camelCase actionName}}Reducer;

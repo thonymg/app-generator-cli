@@ -1,0 +1,57 @@
+import * as a from './actions_types.js';
+
+export function add{{{pascalCase actionName}}{{pascalCase scope}}(...) {
+  return {
+    type: a.ADD_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function remove{{pascalCase actionName}}{{pascalCase scope}}(...) {
+  return {
+    type: a.REMOVE_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function edit{{pascalCase actionName}}{{pascalCase scope}}(...) {
+  return {
+    type: a.EDIT_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function filter{{pascalCase actionName}}{{pascalCase scope}}(...) {
+  return {
+    type: a.FILTER_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function show{{pascalCase actionName}}{{pascalCase scope}}(...) {
+  return {
+    type: a.SHOW_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function hide{{pascalCase actionName}}{{pascalCase scope}}(...) {
+  return {
+    type: a.HIDE_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function toggle{{pascalCase actionName}}{{pascalCase scope}}(...) {
+  return {
+    type: a.TOGGLE_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+
+{{#if next.edit}}
+$1
+{{/if}}
+
+//--ACTIONS CREATORS--
