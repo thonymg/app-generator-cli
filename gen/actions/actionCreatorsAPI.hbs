@@ -1,0 +1,43 @@
+import * as a from './actions_types.js';
+
+export function create{{pascalCase  actionName }}{{pascalCase scope}}(...) {
+  return {
+    type: a.CREATE_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function read{{pascalCase actionName }}{{pascalCase scope}}(...) {
+  return {
+    type: a.READ_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function delete{{pascalCase actionName }}{{pascalCase scope}}(...) {
+  return {
+    type: a.DELETE_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function put{{pascalCase actionName }}{{pascalCase scope}}(...) {
+  return {
+    type: a.PUT_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+export function filter{{pascalCase actionName}}{{pascalCase scope}}(...) {
+  return {
+    type: a.FILTER_{{constantCase actionName}}_{{constantCase scope}},
+		...
+  };
+};
+
+
+{{#if next.edit}}
+$1
+{{/if}}
+
+//--ACTIONS CREATORS--
