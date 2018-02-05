@@ -1,12 +1,13 @@
-import { List, Map } from 'immutable';
-import * as c from '../action/actionTypes';
+import * as a from '../../actions/actions_types.js'
+const INITIAL_STATE = {};
 
-export const INITIAL_STATE = {};
-
-
-export const {{name}}Reducer = (state = INITIAL_STATE, action) => {
+export const {{camelCase name}}Reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+		case A... :
+			return
     default:
       return state;
   }
 };
+
+export default {{camelCase name}}Reducer;

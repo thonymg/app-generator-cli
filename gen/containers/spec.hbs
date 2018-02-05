@@ -4,11 +4,11 @@ import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 
-import {{name}} from './';
+import {{name}} from './{{name}}_container';
 
 const mockStore = configureMockStore();
 
-describe('<{{name}} />', () => {
+describe('<{{pascalCase name}} />', () => {
   let store;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('<{{name}} />', () => {
   it('connects', () => {
     shallow(
       <Provider store={store}>
-        <{{name}} />
+        <{{pascalCase name}} />
       </Provider>,
     );
   });
