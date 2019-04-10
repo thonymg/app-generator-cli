@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import styles from './{{name}}.css';
 {{/if}}
 
-const {{pascalCase name}} = props => (
+const {{pascalCase name}} = (props) => (
   {{#if styles}}
   <div className={styles.{{camelCase name ~}} }>
   {{else}}

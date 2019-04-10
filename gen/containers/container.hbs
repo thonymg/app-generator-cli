@@ -1,14 +1,36 @@
 import { connect } from 'react-redux';
 
-import {{pascalCase component}} from '../../ui/{{component}}';
+class {{pascalCase name}} extends React.Component {
+  static propTypes = {};
+
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+	componentDidMount() {}
+
+  render() {
+    return (
+      {{#if styles}}
+      <Fragment className={styles.{{camelCase name ~}} }>
+      {{else}}
+      <Fragment>
+      {{/if}}
+        {{name}}
+      </Fragment>
+    );
+  }
+}
 
 const mapStateToProps = (state, ownProps)  => ({});
 
 const mapDispatchToProps = (dispatch, ownProps) => ({});
 
-const {{pascalCase name}}Container = connect(
+export default {{pascalCase name}}Container = connect(
   mapStateToProps,
   mapDispatchToProps,
-)({{pascalCase component}});
+)({{pascalCase name}});
 
-export default {{pascalCase name}}Container;
+

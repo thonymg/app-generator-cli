@@ -16,13 +16,13 @@ module.exports = {
 		{
 			type: 'confirm',
 			name: 'stateless',
-			message: 'est ce un stateless component (sans état)?',
+			message: 'est ce un stateless component (function)?',
 			default: true,
 		},
 		{
 			type: 'confirm',
 			name: 'styles',
-			message: 'le component a t il besoins de styles ?',
+			message: 'besoins de styles ?',
 			default: true,
 		},
 	],
@@ -32,34 +32,28 @@ module.exports = {
 		if (data.stateless) {
 			actions.push({
 				type: 'add',
-				path: src + 'components/ui/{{name}}/{{name}}.js',
+				path: src + 'components/{{name}}/{{name}}.component.js',
 				templateFile: path.resolve(__dirname, 'components/stateless.hbs'),
 			});
 		} else {
 			actions.push({
 				type: 'add',
-				path: src + 'components/ui/{{name}}/{{name}}.js',
-				templateFile: path.resolve(__dirname, 'components/stateful.hbs'),
+				path: src + 'components/{{name}}/{{name}}.component.js',
+				templateFile: path.resolve(__dirname, 'components/statefull.hbs'),
 			});
 		}
 
 		if (data.styles) {
 			actions.push({
 				type: 'add',
-				path: src + 'components/ui/{{name}}/{{name}}.css',
+				path: src + 'components/{{name}}/{{name}}.component.css',
 				templateFile: path.resolve(__dirname, 'components/styles.hbs'),
 			});
 		}
 
 		actions.push({
 			type: 'add',
-			path: src + 'components/ui/{{name}}/index.js',
-			templateFile: path.resolve(__dirname, 'components/index.hbs'),
-		});
-
-		actions.push({
-			type: 'add',
-			path: src + 'components/ui/{{name}}/{{name}}.test.js',
+			path: src + 'components/{{name}}/{{name}}.component.test.js',
 			templateFile: path.resolve(__dirname, 'components/spec.hbs'),
 		});
 

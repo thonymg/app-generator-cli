@@ -1,9 +1,9 @@
 /* eslint-disable */
 import deepFreeze from 'deep-freeze';
 
-import { {{camelCase name}}Reducer, INITIAL_STATE } from './{{name}}_reducer';
+import { {{camelCase actionName}} } from './{{camelCase actionName}}.reducer';
 
-describe('{{camelCase name}}Reducer', () => {
+describe('{{camelCase actionName}}Reducer', () => {
   it('returns initial state', () => {
     const action = {
       type: '@@INIT',
@@ -11,7 +11,7 @@ describe('{{camelCase name}}Reducer', () => {
 
     deepFreeze(action);
 
-    const nextState = {{camelCase name}}Reducer(undefined, action);
+    const nextState = {{camelCase actionName}}Reducer(undefined, action);
 
     expect(nextState).toEqual(INITIAL_STATE);
   });
@@ -26,7 +26,7 @@ describe('{{camelCase name}}Reducer', () => {
     deepFreeze(action);
     deepFreeze(prevState);
 
-    const nextState = {{camelCase name}}Reducer(prevState, action);
+    const nextState = {{camelCase actionName}}Reducer(prevState, action);
 
     expect(nextState).toBe(prevState);
   });

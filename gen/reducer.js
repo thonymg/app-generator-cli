@@ -17,12 +17,12 @@ module.exports = {
 	actions: [
 		{
 			type: 'add',
-			path: src + 'reducers/{{name}}/{{name}}_reducer.js',
+			path: src + 'store/reducers/{{name}}/{{name}}.reducer.js',
 			templateFile: path.resolve(__dirname, 'reducer/reducer.hbs'),
 		},
 		{
 			type: 'add',
-			path: src + 'reducers/{{name}}/{{name}}_reducer.test.js',
+			path: src + 'store/reducers/{{name}}/{{name}}.reducer.test.js',
 			templateFile: path.resolve(__dirname, 'reducer/spec.hbs'),
 		},
 	],

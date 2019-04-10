@@ -1,37 +1,37 @@
-import * as a from './actions_types.js';
+import * as types from './{{camelCase actionName}}.actionTypes.js';
 
-export function create{{pascalCase  actionName }}{{pascalCase scope}}(...) {
+export function create{{pascalCase  actionName }}{{pascalCase scope}}( ) {
   return {
-    type: a.CREATE_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type: types.CREATE_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function read{{pascalCase actionName }}{{pascalCase scope}}(...) {
+export function read{{pascalCase actionName }}{{pascalCase scope}}( ) {
   return {
-    type: a.READ_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type: types.READ_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function delete{{pascalCase actionName }}{{pascalCase scope}}(...) {
+export function delete{{pascalCase actionName }}{{ pascalCase scope}}( ) {
   return {
-    type: a.DELETE_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type: types.DELETE_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function put{{pascalCase actionName }}{{pascalCase scope}}(...) {
+export function put{{pascalCase actionName }}{{ pascalCase scope}}( ) {
   return {
-    type: a.PUT_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type: types.PUT_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function filter{{pascalCase actionName}}{{pascalCase scope}}(...) {
+export function filter{{pascalCase actionName }}{{ pascalCase scope}}( ) {
   return {
-    type: a.FILTER_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type: types.FILTER_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 

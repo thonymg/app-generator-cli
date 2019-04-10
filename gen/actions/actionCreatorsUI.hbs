@@ -1,51 +1,51 @@
-import * as a from './actions_types.js';
+import * as type from './{{camelCase actionName}}.actionTypes.js';
 
-export function add{{{pascalCase actionName}}{{pascalCase scope}}(...) {
+export function add{{ pascalCase actionName }}{{ pascalCase scope }}( ) {
   return {
-    type: a.ADD_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type:  type.ADD_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function remove{{pascalCase actionName}}{{pascalCase scope}}(...) {
+export function remove{{ pascalCase actionName }}{{ pascalCase scope}}( ) {
   return {
-    type: a.REMOVE_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type:  type.REMOVE_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function edit{{pascalCase actionName}}{{pascalCase scope}}(...) {
+export function edit{{ pascalCase actionName }}{{ pascalCase scope }}( ) {
   return {
-    type: a.EDIT_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type:  type.EDIT_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function filter{{pascalCase actionName}}{{pascalCase scope}}(...) {
+export function filter{{ pascalCase actionName }}{{ pascalCase scope }}( ) {
   return {
-    type: a.FILTER_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type:  type.FILTER_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function show{{pascalCase actionName}}{{pascalCase scope}}(...) {
+export function show{{ pascalCase actionName }}{{ pascalCase scope }}( ) {
   return {
-    type: a.SHOW_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type:  type.SHOW_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function hide{{pascalCase actionName}}{{pascalCase scope}}(...) {
+export function hide{{pascalCase actionName}}{{pascalCase scope}}( ) {
   return {
-    type: a.HIDE_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type:  type.HIDE_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 
-export function toggle{{pascalCase actionName}}{{pascalCase scope}}(...) {
+export function toggle{{pascalCase actionName}}{{pascalCase scope}}( ) {
   return {
-    type: a.TOGGLE_{{constantCase actionName}}_{{constantCase scope}},
-		...
+    type:  type.TOGGLE_{{constantCase actionName}}_{{constantCase scope}},
+
   };
 };
 

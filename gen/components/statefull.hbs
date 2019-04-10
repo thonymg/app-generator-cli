@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 {{#if styles}}
-import styles from './{{name}}.css';
+import styles from './{{camelCase name}}.css';
 {{/if}}
 
 class {{pascalCase name}} extends React.Component {
@@ -19,12 +19,12 @@ class {{pascalCase name}} extends React.Component {
   render() {
     return (
       {{#if styles}}
-      <div className={styles.{{camelCase name ~}} }>
+      <Fragment className={styles.{{camelCase name ~}} }>
       {{else}}
-      <div>
+      <Fragment>
       {{/if}}
         {{name}}
-      </div>
+      </Fragment>
     );
   }
 }

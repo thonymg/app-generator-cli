@@ -5,9 +5,10 @@ const reducer = require('./gen/reducer');
 const actions = require('./gen/actionCreator');
 
 module.exports = function (plop) {
-	plop.setGenerator('component', component);
-	plop.setGenerator('reducer', reducer);
-	plop.setGenerator('route', route);
-	plop.setGenerator('container', container);
-	plop.setGenerator('actions', actions);
+	plop.setGenerator('Redux - Feature', actions);
+	plop.setGenerator('Redux - Container', container);
+	plop.setGenerator('React - Component', component);
+	// plop.setGenerator('reducer', reducer);
+	// plop.setGenerator('route', route);
+
 }
